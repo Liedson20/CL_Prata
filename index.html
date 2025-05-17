@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CL PRATA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="top-menu">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <div class="left-images">
+      <img src="img/sol1.png" alt="sol1" />
+      <img src="img/onda3.png" alt="onda3" />
+    </div>
+
+    <div class="logo">
+      <img src="img/logo-nova3.png" alt="logo" />
+    </div>
+
+ 
+
+    <div class="right-images">
+      <img src="img/coxa2.png" alt="coxa2" />
+      <img src="img/sol1.png" alt="sol1" />
+    </div>
+
+    <div class="cart-icon" onclick="abrirCarrinho()">
+      <span class="material-icons">shopping_bag</span>
+      <span class="cart-count">0</span>
+    </div>
+  </header>
+
+
+    <!--banner-->
+  <div id="banner-desconto" class="banner-desconto">
+    <p><i class="fas fa-gift"></i> Bem-vindo! Ganhe <strong>5% de desconto</strong> na sua primeira compra!</p>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="O que você está buscando?" />
+    <button><span class="material-icons">search</span></button>
+  </div>
+
+  <!--carrinho-->
+  <div id="carrinho-lateral" class="carrinho-lateral">
+  <div class="carrinho-header">
+    <h3>Seu Carrinho</h3>
+    <span class="fechar-carrinho" onclick="fecharCarrinho()">×</span>
+  </div>
+  <div class="carrinho-itens">
+    <p>Seu carrinho está vazio</p>
+    <span class="cart-count">0</span>
+    <!-- Aqui os produtos aparecerão -->
+  </div>
+  <a href="https://wa.me/5583999733374" target="_blank" class="botao-finalizar">Finalizar no WhatsApp</a>
+</div>
+
+  
+
+  <!-- MENU LATERAL -->
+ <nav id="side-menu" class="side-menu">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="#"><i class="fas fa-home"></i> Início</a>
+  <a href="#"><i class="fas fa-box-open"></i> Produtos</a>
+  <a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a>
+</nav>
+  <div class="botoes-flutuantes">
+  <!-- Botão do WhatsApp -->
+  <a href="https://wa.me/5583999733374 " target="_blank" class="botao-zap">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Botão do Instagram -->
+  <a href="https://instagram.com/cl_prataas" target="_blank" class="botao-insta">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+  
+<!-- Aqui Começa colocar os produtos-->
+
+  <section class="produtos">
+  <div class="produto-card">
+    <img src="img-produto/colar_01.jpeg" alt="Choker cravejada de borboleta" />
+    <h3>Choker cravejada de borboleta</h3>
+    <p class="preco">R$ 135,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Choker cravejada de borboleta', 135.00, 'img-produto/colar_01.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/coloar_02.jpeg" alt="Colar São Bento" />
+    <h3>Colar São Bento</h3>
+    <p class="preco">R$ 155,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Colar São Bento', 155.00, 'img-produto/coloar_02.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>   
+
+  <div class="produto-card">
+    <img src="img-produto/pigente.jpeg" alt="Pingente cravejado redondo" />
+    <h3>Pingente cravejado redondo</h3>
+    <p class="preco">R$ 55,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente cravejado redondo', 55.00, 'img-produto/pigente.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>   
+
+  <div class="produto-card">
+    <img src="img-produto/pigente_02.jpeg" alt="Pingente São Bento" />
+    <h3>Pingente São Bento</h3>
+    <p class="preco">R$ 55,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente São Bento', 55.00, 'img-produto/pigente_02.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>   
+
+  <div class="produto-card">
+    <img src="img-produto/brinco_01.jpeg" alt="Brinco cravejado rosa quadrado" />
+    <h3>Brinco cravejado rosa quadrado</h3>
+    <p class="preco">R$ 79,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco cravejado rosa quadrado', 79.99, 'img-produto/brinco_01.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>  
+  
+  <div class="produto-card">
+    <img src="img-produto/brinco_02.jpeg" alt="Brinco asa de borboleta" />
+    <h3>Brinco asa de borboleta</h3>
+    <p class="preco">R$ 85,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco asa de borboleta', 85.00, 'img-produto/brinco_02.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>  
+
+  <div class="produto-card">
+    <img src="img-produto/brinco_luxo.jpeg" alt="Brinco luxo gota azul" />
+    <h3>Brinco luxo gota azul</h3>
+    <p class="preco">R$ 89,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco luxo gota azul', 89.99, 'img-produto/brinco_luxo.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>  
+
+  <div class="produto-card">
+    <img src="img-produto/Brinco hamsa.jpeg" alt="Brinco Hamsa" />
+    <h3>Brinco Hamsa</h3> 
+    <p class="preco">R$ 80,80</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco Hamsa', 80.80, 'img-produto/Brinco hamsa.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>  
+
+  <div class="produto-card">
+    <img src="img-produto/Brinco cravejado olho grego.jpeg" alt="Brinco cravejado olho grego" />
+    <h3>Brinco cravejado olho grego</h3> 
+    <p class="preco">R$ 115,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco cravejado olho grego', 115.00, 'img-produto/Brinco cravejado olho grego.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>  
+
+  <div class="produto-card">
+    <img src="img-produto/trio.jpeg" alt="Trio Borboleta" />
+    <h3>Trio Borboleta</h3>
+    <p class="preco">Unidade: R$ 25,00</p>
+    <p class="preco">Trio: R$ 50,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Trio Borboleta', 50.00, 'img-produto/trio.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+
+<div class="produto-card">
+    <img src="img-produto/Pulseira Aurora.jpeg" alt="Pulseira Aurora" />
+    <h3>Pulseira Aurora</h3>
+    <p class="preco"> R$ 65,50</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Aurora', 65.50, 'img-produto/Pulseira Aurora.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/Pulseira olho grego.jpeg" alt="Pulseira olho grego" />
+    <h3>Pulseira olho grego</h3>
+    <p class="preco"> R$ 65,50</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Aurora', 65.50, 'img-produto/Pulseira olho grego.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+ <div class="produto-card">
+    <img src="img-produto/Pulseira Solzinhoe.jpeg" alt="Pulseira Solzinhoe" />
+    <h3>Pulseira Solzinhoe</h3>
+    <p class="preco"> R$ 89,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Solzinhoe', 89.99, 'img-produto/Pulseira Solzinhoe.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/Pingente borboleta.jpeg" alt="Pingente borboleta" />
+    <h3>Pingente borboleta</h3>
+    <p class="preco"> R$ 49,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente borboleta', 49.99, 'img-produto/Pingente borboleta.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pulseira flor.jpeg" alt="pulseira flor " />
+    <h3>Pulseira Flor</h3>
+    <p class="preco"> R$ 169,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Flor', 169.00, 'img-produto/Pulseira Flor.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pulseira_pandora.jpeg" alt="pulseira_pandora.jpeg " />
+    <h3>Pulseira Pandora Coroa tam 21</h3>
+    <p class="preco"> R$ 199,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira Pandora Coroa TAM 21', 199.99, 'img-produto/pulseira_pandora.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/anel hamsa pequeno regulável.jpeg" alt="anel hamsa pequeno regulável" />
+    <h3>Anel Hamsa pequeno regulável</h3>
+    <p class="preco"> R$ 67,50</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Hamsa pequeno regulável', 67.50, 'img-produto/anel hamsa pequeno regulável.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/Anel margarida.jpeg" alt="anel margarida" />
+    <h3>Anel Margarida</h3>
+    <p class="preco"> R$ 99,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel margarida', 99.99, 'img-produto/Anel Margarida.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  
+<div class="produto-card">
+    <img src="img-produto/Anel elefante geométrico.jpeg" alt="anel elefante" />
+    <h3>Anel Elefante Geométrico</h3>
+    <p class="preco"> R$ 115,15</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Elefante geométrico', 115.15, 'img-produto/Anel elefante geométrico.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/Anel_borboleta.jpeg" alt="anel borboleta" />
+    <h3>Anel Borboleta Cravejado</h3>
+    <p class="preco"> R$ 110,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Borboleta Cravejado', 110.00, 'img-produto/Anel_borboleta.jpeg', 
+    this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/Anel rabo de sereia.jpeg" alt="anel rabo de sereia" />
+    <h3>Anel Rabo de sereia regulável</h3>
+    <p class="preco"> R$ 99,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Rabo de sereia regulável', 99.99, 'img-produto/Anel rabo de sereia.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/anel coroa.jpeg" alt="anel coroa"/>
+    <h3>Anel Coroa regulável</h3>
+    <p class="preco"> R$ 85,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Coroa', 85.00, 'img-produto/Anel coroa.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/anel lua.jpeg" alt="anel lua"/>
+    <h3>Anel Lua Vazada</h3>
+    <p class="preco"> R$ 85,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Lua Vazada', 85.00, 'img-produto/Anel lua.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto-card">
+    <img src="img-produto/anel hamsa.jpeg" alt="anel hamsa"/>
+    <h3>Anel hamsa Grande</h3>
+    <p class="preco"> R$ 90,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('Anel hamsa Grande', 85.00, 'img-produto/Anel hamsa.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pulseira trevo azul.jpeg" alt=" pulseira trevo"/>
+    <h3> Pulseira trevo azul</h3>
+    <p class="preco"> R$ 90,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira trevo azul', 85.00, 'img-produto/pulseira trevo azul.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pulseira bismark.jpeg" alt=" pulseira bismark"/>
+    <h3> Pulseira bismark</h3>
+    <p class="preco"> R$ 99,99</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira bismark', 85.00, 'img-produto/pulseira bismark.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pigente do sol do amor.jpeg" alt=" pingente do sol"/>
+    <h3> Pigente do sol do mar do amor</h3>
+    <p class="preco"> R$ 65,90</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pigente do sol mar do amor', 65.90, 'img-produto/pigente do sol do amor.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+  
+<div class="produto-card">
+    <img src="img-produto/pingente feita de sol.jpeg" alt=" pingente feita de sol"/>
+    <h3> Pigente feita de sol</h3>
+    <p class="preco"> R$ 65,90</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 65.90, 'img-produto/pingente feita de sol.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+
+<div class="produto-card">
+    <img src="img-produto/pingente de sol de sal.jpeg" alt=" pingente de sol de sal"/>
+    <h3> Pigente de Sol de sal eu sou</h3>
+    <p class="preco"> R$ 65,90</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 65.90, 'img-produto/pingente de sol de sal.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pingente rabo de sereia.jpeg" alt=" pingente rabo de sereia"/>
+    <h3> Pigente rabo de sereia</h3>
+    <p class="preco"> R$ 35,00</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 35.00, 'img-produto/pingente feita de sol.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+
+<div class="produto-card">
+    <img src="img-produto/pingente onda e sol.jpeg" alt=" pingente onda e sol"/>
+    <h3> Pigente onda e sol</h3>
+    <p class="preco"> R$ 65,90</p>
+    <button class="btn-add" onclick="adicionarAoCarrinho('pingente onda e sol', 65.90, 'img-produto/pingente onda e sol.jpeg', this)">Adicionar ao Carrinho</button>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+  <footer id="rodape" class="rodape">
+  <div class="container-rodape">
+
+    <div class="sobre-rodape">
+      <h2>CL Pratas</h2>
+      <p>A CL Pratas é uma loja especializada em prata 925, com uma seleção única de joias que vão do estilo praiano ao sofisticado, sempre com um toque de leveza, elegância e autenticidade.</p>
+      <p>Cada peça é feita com qualidade garantida e durabilidade vitalícia, pensada para te acompanhar em todos os momentos — porque você merece se sentir linda com joias que têm a sua essência.</p>
+      <p>Aqui, a prata é mais que um acessório: é um detalhe que transforma. E na CL Pratas, você encontra tudo para se arrasar com estilo e confiança.</p>
+    </div>
+
+    <div class="info-rodape">
+      <h3>Informações</h3>
+      <ul>
+        <li><strong>Localização:</strong> João Pessoa - PB</li>
+        <li><strong>Entrega para:</strong> Todo o Brasil</li>
+        <li><strong>Horário:</strong> Seg a Dom, das 8h às 21h</li>
+      </ul>
+    </div>
+
+    <div class="pagamentos-rodape">
+      <h3>Formas de Pagamento</h3>
+      <div class="pagamentos">
+        <span><i class="fa-solid fa-credit-card"></i> Cartão de Crédito</span>
+        <span><i class="fa-solid fa-credit-card"></i> Cartão de Débito</span>
+        <span><i class="fa-solid fa-qrcode"></i> Pix (lombardilunaayres@gmail.com)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="assinatura-rodape">
+    Desenvolvido por Liedson Mendes Almeida
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+  
+
+
+</body>
+</html>
