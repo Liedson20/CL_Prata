@@ -138,3 +138,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Adiciona nome do produto em maiúsculo ao carrinho
+const nomeProdutoUpper = nome.toUpperCase(); // transforma o nome em maiúsculo
+
+const nomeElem = document.createElement("h4");
+nomeElem.textContent = nomeProdutoUpper;
+div.appendChild(nomeElem);
+
