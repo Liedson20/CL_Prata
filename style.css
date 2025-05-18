@@ -711,3 +711,55 @@ main {
   padding: 20px;
   
 }
+
+
+
+
+/* Fonte bonita e chamativa para produtos (listagem e carrinho) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Nomes dos produtos na listagem */
+.produto-card h3 {
+  text-transform: uppercase;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2rem;
+  color: #111;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Nomes dos produtos no carrinho */
+.carrinho-itens h4 {
+  text-transform: uppercase;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  color: #000;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin: 0.2rem 0;
+}
+
+
+/* Preço dos produtos na listagem */
+.produto-card p {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.3rem;
+  color: black; /* Rosa vibrante - você pode trocar por #ff6600 (laranja) ou #4CAF50 (verde) */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 0.3rem 0;
+}
+
+/* Preço no carrinho */
+.carrinho-itens p {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 0.2rem 0;
+}
+
