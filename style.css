@@ -187,7 +187,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 15px;
-  max-width: 300px; /* largura reduzida */
+  max-width: 350px; /* largura reduzida */
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -713,8 +713,6 @@ main {
 }
 
 
-
-
 /* Fonte bonita e chamativa para produtos (listagem e carrinho) */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
@@ -762,4 +760,3 @@ main {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   margin: 0.2rem 0;
 }
-
