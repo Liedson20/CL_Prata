@@ -16,9 +16,11 @@ body {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right, #005bea, #00c6fb);
-  padding: 10px 20px;
+  padding: 10px;
+  width: 100%;
   color: white;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Ícone do menu */
@@ -645,4 +647,54 @@ body {
   font-size: 14px;
   color: #eef1e6;
   font-style: italic;
+}
+
+/*correção na tela mobile*/
+
+@media (max-width: 480px) {
+  .topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topo img {
+    margin: 0 0 10px 0;
+  }
+
+  .topo h1 {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+    gap: 12px;
+  }
+
+  .produto-card {
+    padding: 10px;
+  }
+
+  .produto-card img {
+    max-height: 150px;
+  }
+
+  .produto-card h3 {
+    font-size: 1rem;
+  }
+
+  .descricao {
+    font-size: 0.8rem;
+  }
+
+  .preco {
+    font-size: 0.9rem;
+  }
+
+  .btn-add {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
