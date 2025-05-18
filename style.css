@@ -42,8 +42,8 @@ body {
 /* Tamanho das imagens decorativas */
 .left-images img,
 .right-images img {
-  height: 80px;
-  width: auto;
+  height: 20px;
+  width: 100%;
   object-fit: contain;
   cursor: pointer;
   user-select: none;
@@ -68,7 +68,7 @@ body {
   position: fixed;
   top: 0;
   right: -350px;          /* Inicialmente escondido à direita */
-  width: 350px;
+  width: 35px;
   height: 100vh;
   background: #fff;
   box-shadow: -3px 0 7px rgba(0,0,0,0.1);
@@ -136,7 +136,7 @@ body {
 .banner-desconto {
   background: linear-gradient(90deg, #060c34, #03486d);
   color: white;
-  padding: 18px 25px;
+  padding: 5px 2px;
   text-align: center;
   position: fixed;
   top: 0;
@@ -187,7 +187,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 15px;
-  max-width: 400px; /* largura reduzida */
+  max-width: 300px; /* largura reduzida */
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -241,7 +241,7 @@ body {
   background-color: #ffffff;
   width: 220px;
   height: 100%;
-  padding: 20px;
+  padding: 5px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 3000;
   transition: transform 0.3s ease;
@@ -254,7 +254,7 @@ body {
 }
 
 .side-menu a {
-  margin: 15px 0;
+  margin: 20px 0;
   color: #333;
   text-decoration: none;
   font-family: 'frendoka',sans-serif;
@@ -318,6 +318,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
   transition: transform 0.3s;
 }
 
@@ -480,6 +481,7 @@ body {
 .item-carrinho {
   display: flex;
   gap: 10px;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 15px;
   border-bottom: 1px solid #eee;
@@ -487,8 +489,8 @@ body {
 }
 
 .item-carrinho img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -540,29 +542,72 @@ body {
 
 /* Responsivo para celulares */
 @media (max-width: 480px) {
-  .carrinho-lateral {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .imagem-carrinho {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .info-produto {
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
   }
 
-  .item-carrinho img {
-    width: 100%;
-    height: auto;
+  .nome-produto {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
   }
 
-  .item-carrinho div {
-    width: 100%;
+  .preco-produto {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
   }
 
-  .botao-finalizar {
+  .remover {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: red;
+    cursor: pointer;
+  }
+
+  .finalizar-whatsapp {
+    display: block;
     width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #25d366;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .itens-carrinho {
+    max-height: 50vh;
+    overflow-y: auto;
   }
 }
+  
+ 
+
 /*rodape*/
 
 /* Rodapé */
@@ -649,159 +694,20 @@ body {
   font-style: italic;
 }
 
-/*correção na tela mobile*/
-
-@media (max-width: 480px) {
-  .topo {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .topo img {
-    margin: 0 0 10px 0;
-  }
-
-  .topo h1 {
-    font-size: 1.2rem;
-  }
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:16px
+  padding 20px;
 }
 
-
-@media (max-width: 600px) {
+@media (min-width:760px) {
   .produtos {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
-    gap: 12px;
-  }
-
-  .produto-card {
-    padding: 10px;
-  }
-
-  .produto-card img {
-    max-height: 150px;
-  }
-
-  .produto-card h3 {
-    font-size: 1rem;
-  }
-
-  .descricao {
-    font-size: 0.8rem;
-  }
-
-  .preco {
-    font-size: 0.9rem;
-  }
-
-  .btn-add {
-    padding: 8px;
-    font-size: 0.9rem;
+    grid-template-columns: repeat(3,1fr);
   }
 }
-
-
-
-body {
-  overflow-x: hidden;
-}
-
-.topo {
-  width: 100%;         /* ocupa toda a largura da tela */
-  box-sizing: border-box; /* para não ultrapassar a largura incluindo padding */
-  background-color: #007BFF;
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Unificar carrinho lateral */
-
-.carrinho-lateral {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  max-width: 400px;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-  z-index: 1500; /* entre menu lateral e banner */
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.carrinho-lateral.aberto {
-  right: 0;
-}
-
-/* Ajuste botão fechar no mobile */
-.fechar-carrinho {
-  font-size: 50px; /* menor que 80px */
-  cursor: pointer;
-}
-
-@media (max-width: 480px) {
-  .fechar-carrinho {
-    font-size: 40px;
-  }
-}
-
-/* Contador carrinho */
-.cart-count {
-  position: absolute;
-  top: 5px;
-  right: -8px;
-  background-color: #1b0bc5; /* verde WhatsApp */
-  color: white;
-  border-radius: 50%;
-  padding: 3px 7px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* Ajuste para que o carrinho ocupe 100% da largura no mobile */
-@media (max-width: 480px) {
-  .carrinho-lateral {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* Ajuste do grid produtos no mobile */
-@media (max-width: 600px) {
-  .produtos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
+main {
   background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  max-width: 100%;
-  flex-wrap: wrap;
+  padding: 20px;
+  
 }
-
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.botao-menu {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
