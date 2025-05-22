@@ -44,6 +44,8 @@
   </header>
 
 
+
+
     <!--banner-->
   <div id="banner-desconto" class="banner-desconto">
     <p><i class="fas fa-gift"></i> Bem-vindo! Ganhe <strong>5% de desconto</strong> na sua primeira compra!</p>
@@ -91,230 +93,444 @@
 
   
 <!-- Aqui Começa colocar os produtos-->
-
   <section class="produtos">
+ <div class="produto-card">
+  <img src="img-produto/colar_01.jpeg" alt="Borboleta"
+       onclick="abrirModal('img-produto/colar_01.jpeg', 'CHOKER CRAVEJADA DE BORBOLETA', 'Peça exclusiva: Borboleta. Material de alta qualidade e acabamento refinado.', 'R$ 135,00')">
+  <h3>CHOKER CRAVEJADA DE BORBOLETA </h3>
+  <p class="preco">R$ 135,00</p>
+  <p id="estoque-borboleta" class="estoque" style="display: none;">3</p>
+  <button id="btn-borboleta" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Borboleta', 135.00, 'img-produto/colar_01.jpeg', 'borboleta')">
+    Adicionar ao Carrinho
+  </button>
+</div>
   <div class="produto-card">
-    <img src="img-produto/colar_01.jpeg" alt="Choker cravejada de borboleta" />
-    <h3>Choker cravejada de borboleta</h3>
-    <p class="preco">R$ 135,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Choker cravejada de borboleta', 135.00, 'img-produto/colar_01.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  <div class="produto-card">
-    <img src="img-produto/coloar_02.jpeg" alt="Colar São Bento" />
-    <h3>Colar São Bento</h3>
-    <p class="preco">R$ 155,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Colar São Bento', 155.00, 'img-produto/coloar_02.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>   
-
-  <div class="produto-card">
-    <img src="img-produto/pigente.jpeg" alt="Pingente cravejado redondo" />
-    <h3>Pingente cravejado redondo</h3>
-    <p class="preco">R$ 55,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente cravejado redondo', 55.00, 'img-produto/pigente.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>   
-
-  <div class="produto-card">
-    <img src="img-produto/pigente_02.jpeg" alt="Pingente São Bento" />
-    <h3>Pingente São Bento</h3>
-    <p class="preco">R$ 55,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente São Bento', 55.00, 'img-produto/pigente_02.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>   
-
-  <div class="produto-card">
-    <img src="img-produto/brinco_01.jpeg" alt="Brinco cravejado rosa quadrado" />
-    <h3>Brinco cravejado rosa quadrado</h3>
-    <p class="preco">R$ 79,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco cravejado rosa quadrado', 79.99, 'img-produto/brinco_01.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>  
-  
-  <div class="produto-card">
-    <img src="img-produto/brinco_02.jpeg" alt="Brinco asa de borboleta" />
-    <h3>Brinco asa de borboleta</h3>
-    <p class="preco">R$ 85,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco asa de borboleta', 85.00, 'img-produto/brinco_02.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>  
-
-  <div class="produto-card">
-    <img src="img-produto/brinco_luxo.jpeg" alt="Brinco luxo gota azul" />
-    <h3>Brinco luxo gota azul</h3>
-    <p class="preco">R$ 89,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco luxo gota azul', 89.99, 'img-produto/brinco_luxo.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>  
-
-  <div class="produto-card">
-    <img src="img-produto/Brinco hamsa.jpeg" alt="Brinco Hamsa" />
-    <h3>Brinco Hamsa</h3> 
-    <p class="preco">R$ 80,80</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco Hamsa', 80.80, 'img-produto/Brinco hamsa.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>  
-
-  <div class="produto-card">
-    <img src="img-produto/Brinco cravejado olho grego.jpeg" alt="Brinco cravejado olho grego" />
-    <h3>Brinco cravejado olho grego</h3> 
-    <p class="preco">R$ 115,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Brinco cravejado olho grego', 115.00, 'img-produto/Brinco cravejado olho grego.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>  
-
-  <div class="produto-card">
-    <img src="img-produto/trio.jpeg" alt="Trio Borboleta" />
-    <h3>Trio Borboleta</h3>
-    <p class="preco">Unidade: R$ 25,00</p>
-    <p class="preco">Trio: R$ 50,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Trio Borboleta', 50.00, 'img-produto/trio.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
+  <img src="img-produto/coloar_02.jpeg" alt="Colar São Bento"
+       onclick="abrirModal('img-produto/coloar_02.jpeg', 'Colar São Bento', 'Peça exclusiva: colar São Bento pingente de São Bento + corrente pipoca 50 cm em prata 925.', 'R$ 155,00')">
+  <h3>Colar São Bento</h3>
+  <p class="preco">R$ 155,00</p>
+  <p id="estoque-colar-são-bento" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-colar-são-bento" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Colar São Bento', 155.00, 'img-produto/coloar_02.jpeg', 'colar-são-bento')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/Pulseira Aurora.jpeg" alt="Pulseira Aurora" />
-    <h3>Pulseira Aurora</h3>
-    <p class="preco"> R$ 65,50</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Aurora', 65.50, 'img-produto/Pulseira Aurora.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/pigente.jpeg" alt="Pingente cravejado redondo"
+       onclick="abrirModal('img-produto/pigente.jpeg', 'Pingente cravejado redondo', 'Peça exclusiva: Pingente cravejado redondo. Material de alta qualidade e acabamento refinado.', 'R$ 55,00')">
+  <h3>Pingente cravejado redondo</h3>
+  <p class="preco">R$ 55,00</p>
+  <p id="estoque-pingente-cravejado-redondo" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pingente-cravejado-redondo" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente cravejado redondo', 55.00, 'img-produto/pigente.jpeg', 'pingente-cravejado-redondo')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pigente_02.jpeg" alt="Pingente Sao Bento"
+       onclick="abrirModal('img-produto/pigente_02.jpeg', 'Pingente São Bento', 'Peça exclusiva: Pingente São Bento. Material de alta qualidade e acabamento refinado.', 'R$ 55.00')">
+  <h3>Pingente São Bento</h3>
+  <p class="preco">R$ 55,00</p>
+  <p id="estoque-pingente-sao-bento" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pingente-sao-bento" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente Sao Bento', 55.00, 'img-produto/pigente_02.jpeg', 'pingente-sao-bento')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/brinco_01.jpeg" alt="Brinco cravejado rosa quadrado"
+       onclick="abrirModal('img-produto/brinco_01.jpeg', 'Brinco cravejado rosa quadrado', 'Peça exclusiva: Brinco cravejado rosa quadrado. Material de alta qualidade e acabamento refinado.', 'R$ 79.99')">
+  <h3>Brinco cravejado rosa quadrado</h3>
+  <p class="preco">R$ 79,99</p>
+  <p id="estoque-brinco-cravejado-rosa-quadrado" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-brinco-cravejado-rosa-quadrado" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Brinco cravejado rosa quadrado', 79.99, 'img-produto/brinco_01.jpeg', 'brinco-cravejado-rosa-quadrado')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/brinco_02.jpeg" alt="Brinco asa de borboleta"
+       onclick="abrirModal('img-produto/brinco_02.jpeg', 'Brinco asa de borboleta', 'Peça exclusiva: Brinco asa de borboleta. Material de alta qualidade e acabamento refinado.', 'R$ 85.00')">
+  <h3>Brinco asa de borboleta</h3>
+  <p class="preco">R$ 85,00</p>
+  <p id="estoque-brinco-asa-de-borboleta" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-brinco-asa-de-borboleta" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Brinco asa de borboleta', 85.00, 'img-produto/brinco_02.jpeg', 'brinco-asa-de-borboleta')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
   <div class="produto-card">
-    <img src="img-produto/Pulseira olho grego.jpeg" alt="Pulseira olho grego" />
-    <h3>Pulseira olho grego</h3>
-    <p class="preco"> R$ 65,50</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Aurora', 65.50, 'img-produto/Pulseira olho grego.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/brinco_luxo.jpeg" alt="Brinco luxo gota azul"
+       onclick="abrirModal('img-produto/brinco_luxo.jpeg', 'Brinco luxo gota azul', 'Peça exclusiva: Brinco luxo gota azul. Material de alta qualidade e acabamento refinado.', 'R$ 89.99')">
+  <h3>Brinco luxo gota azul</h3>
+  <p class="preco">R$ 89,99</p>
+  <p id="estoque-brinco-luxo-gota-azul" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-brinco-luxo-gota-azul" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Brinco luxo gota azul', 89.99, 'img-produto/brinco_luxo.jpeg', 'brinco-luxo-gota-azul')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/Brinco hamsa.jpeg" alt="Brinco Hamsa"
+       onclick="abrirModal('img-produto/Brinco hamsa.jpeg', 'Brinco Hamsa', 'Peça exclusiva: Brinco Hamsa. Material de alta qualidade e acabamento refinado.', 'R$ 80.80')">
+  <h3>Brinco Hamsa</h3>
+  <p class="preco">R$ 80,80</p>
+  <p id="estoque-brinco-hamsa" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-brinco-hamsa" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Brinco Hamsa', 80.80, 'img-produto/Brinco hamsa.jpeg', 'brinco-hamsa')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/Brinco cravejado olho grego.jpeg" alt="Brinco cravejado olho grego"
+       onclick="abrirModal('img-produto/Brinco cravejado olho grego.jpeg', 'Brinco cravejado olho grego', 'Peça exclusiva: Brinco cravejado olho grego. Material de alta qualidade e acabamento refinado.', 'R$ 115.00')">
+  <h3>Brinco cravejado olho grego</h3>
+  <p class="preco">R$ 115,00</p>
+  <p id="estoque-brinco-cravejado-olho-grego" class="estoque" style="display: none;">Estoque: 1</p>
+  <button id="btn-brinco-cravejado-olho-grego" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Brinco cravejdo olho grego', 115.00, 'img-produto/Brinco cravejado olho grego.jpeg', 'brinco-cravejado-olho-grego')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/trio.jpeg" alt="trio borboleta"
+       onclick="abrirModal('img-produto/trio.jpeg', 'Trio Brboleta', 'Peça exclusiva: Trio Borboleta. Material de alta qualidade e acabamento refinado.', 'R$ 50.00')">
+  <h3>Trio Borboleta</h3>
+  <p class="preco">R$ 50,00</p>
+  <p id="estoque-trio-borboleta" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-trio-borboleta" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('trio borboleta', 50.00, 'img-produto/trio.jpeg', 'trio-borboleta')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/Pulseira Aurora.jpeg" alt="Pulseira Aurora"
+       onclick="abrirModal('img-produto/Pulseira Aurora.jpeg', 'Pulseira Aurora', 'Peça exclusiva: Pulseira Aurora. Material de alta qualidade e acabamento refinado.', 'R$ 65.50')">
+  <h3>Pulseira Aurora</h3>
+  <p class="preco">R$ 65,50</p>
+  <p id="estoque-pulseira-aurora" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pulseira-aurora" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira Aurora', 65.50, 'img-produto/Pulseira Aurora.jpeg', 'pulseira-aurora')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+<!-- aqui-->
 
  <div class="produto-card">
-    <img src="img-produto/Pulseira Solzinhoe.jpeg" alt="Pulseira Solzinhoe" />
-    <h3>Pulseira Solzinhoe</h3>
-    <p class="preco"> R$ 89,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Solzinhoe', 89.99, 'img-produto/Pulseira Solzinhoe.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  <div class="produto-card">
-    <img src="img-produto/Pingente borboleta.jpeg" alt="Pingente borboleta" />
-    <h3>Pingente borboleta</h3>
-    <p class="preco"> R$ 49,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pingente borboleta', 49.99, 'img-produto/Pingente borboleta.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Pulseira olho grego.jpeg" alt="Pulseira olho grego"
+       onclick="abrirModal('img-produto/Pulseira olho grego.jpeg', 'Pulseira olho grego', 'Peça exclusiva: Pulseira olho grego. Material de alta qualidade e acabamento refinado.', 'R$ 65.50')">
+  <h3>Pulseira olho grego</h3>
+  <p class="preco">R$ 65,50</p>
+  <p id="estoque-pulseira-olho-grego" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pulseira-olho-grego" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira olho grego', 65.50, 'img-produto/Pulseira olho grego.jpeg', 'pulseira-olho-grego')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pulseira flor.jpeg" alt="pulseira flor " />
-    <h3>Pulseira Flor</h3>
-    <p class="preco"> R$ 169,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Pulseira Flor', 169.00, 'img-produto/Pulseira Flor.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Pulseira Solzinhoe.jpeg" alt="Pulseira Solzinhoe"
+       onclick="abrirModal('img-produto/Pulseira Solzinhoe.jpeg', 'Pulseira Solzinhoe', 'Peça exclusiva: Pulseira Solzinhoe. Material de alta qualidade e acabamento refinado.', 'R$ 89.99')">
+  <h3>Pulseira Solzinhoe</h3>
+  <p class="preco">R$ 89,99</p>
+  <p id="estoque-pulseira-solzinhoe" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pulseira-solzinhoe" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira Solzinhoe', 89.99, 'img-produto/Pulseira Solzinhoe.jpeg', 'pulseira-solzinhoe')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pulseira_pandora.jpeg" alt="pulseira_pandora.jpeg " />
-    <h3>Pulseira Pandora Coroa tam 21</h3>
-    <p class="preco"> R$ 199,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira Pandora Coroa TAM 21', 199.99, 'img-produto/pulseira_pandora.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Pingente borboleta.jpeg" alt="Pingente borboleta"
+       onclick="abrirModal('img-produto/Pingente borboleta.jpeg', 'Pingente borboleta', 'Peça exclusiva: Pingente borboleta. Material de alta qualidade e acabamento refinado.', 'R$ 49.99')">
+  <h3>Pingente borboleta</h3>
+  <p class="preco">R$ 49,99</p>
+  <p id="estoque-pingente-borboleta" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pingente-borboleta" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente borboleta', 49.99, 'img-produto/Pingente borboleta.jpeg', 'pingente-borboleta')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/anel hamsa pequeno regulável.jpeg" alt="anel hamsa pequeno regulável" />
-    <h3>Anel Hamsa pequeno regulável</h3>
-    <p class="preco"> R$ 67,50</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Hamsa pequeno regulável', 67.50, 'img-produto/anel hamsa pequeno regulável.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  <div class="produto-card">
-    <img src="img-produto/Anel margarida.jpeg" alt="anel margarida" />
-    <h3>Anel Margarida</h3>
-    <p class="preco"> R$ 99,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel margarida', 99.99, 'img-produto/Anel Margarida.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  
-<div class="produto-card">
-    <img src="img-produto/Anel elefante geométrico.jpeg" alt="anel elefante" />
-    <h3>Anel Elefante Geométrico</h3>
-    <p class="preco"> R$ 115,15</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Elefante geométrico', 115.15, 'img-produto/Anel elefante geométrico.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/pulseira flor.jpeg" alt="pulseira flor"
+       onclick="abrirModal('img-produto/pulseira flor.jpeg', 'pulseira flor', 'Peça exclusiva: pulseira flor. Material de alta qualidade e acabamento refinado.', 'R$ 169,00')">
+  <h3>Pulseira Flor</h3>
+  <p class="preco">R$ 169,00</p>
+  <p id="estoque-pulseira-flor" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-pulseira-flor" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('pulseira flor', 169.00, 'img-produto/pulseira flor.jpeg', 'pulseira-flor')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/Anel_borboleta.jpeg" alt="anel borboleta" />
-    <h3>Anel Borboleta Cravejado</h3>
-    <p class="preco"> R$ 110,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Borboleta Cravejado', 110.00, 'img-produto/Anel_borboleta.jpeg', 
-    this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/pulseira_pandora.jpeg" alt="Pulseira Pandora Coroa"
+       onclick="abrirModal('img-produto/pulseira_pandora.jpeg', 'Pulseira Pandora Coroa', 'Peça exclusiva: Pulseira Pandora Coroa. Material de alta qualidade e acabamento refinado TAM 21.', 'R$ 199.99')">
+  <h3>Pulseira Pandora Coroa</h3>
+  <p class="preco">R$ 199,99</p>
+  <p id="estoque-pulseira-pandora-coroa" class="estoque" style="display: none;">3</p>
+  <button id="btn-pulseira-pandora-coroa" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira Pandora Coroa', 199.99, 'img-produto/pulseira_pandora.jpeg', 'pulseira-pandora-coroa')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/Anel rabo de sereia.jpeg" alt="anel rabo de sereia" />
-    <h3>Anel Rabo de sereia regulável</h3>
-    <p class="preco"> R$ 99,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Rabo de sereia regulável', 99.99, 'img-produto/Anel rabo de sereia.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/anel hamsa pequeno regulável.jpeg" alt="Anel Hamsa pequeno regulável"
+       onclick="abrirModal('img-produto/anel hamsa pequeno regulável.jpeg', 'Anel Hamsa pequeno regulável', 'Peça exclusiva: Anel Hamsa pequeno regulável. Material de alta qualidade e acabamento refinado.', 'R$ 67,50')">
+  <h3>Anel Hamsa pequeno regulável</h3>
+  <p class="preco">R$ 67,50</p>
+  <p id="estoque-anel-hamsa-pequeno-regulável" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-hamsa-pequeno-regulável" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Hamsa pequeno regulável', 67.50, 'img-produto/anel hamsa pequeno regulável.jpeg', 'anel-hamsa-pequeno-regulável')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/anel coroa.jpeg" alt="anel coroa"/>
-    <h3>Anel Coroa regulável</h3>
-    <p class="preco"> R$ 85,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Coroa', 85.00, 'img-produto/Anel coroa.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  <div class="produto-card">
-    <img src="img-produto/anel lua.jpeg" alt="anel lua"/>
-    <h3>Anel Lua Vazada</h3>
-    <p class="preco"> R$ 85,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel Lua Vazada', 85.00, 'img-produto/Anel lua.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-
-  <div class="produto-card">
-    <img src="img-produto/anel hamsa.jpeg" alt="anel hamsa"/>
-    <h3>Anel hamsa Grande</h3>
-    <p class="preco"> R$ 90,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('Anel hamsa Grande', 85.00, 'img-produto/Anel hamsa.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Anel margarida.jpeg" alt="Anel Margarida"
+       onclick="abrirModal('img-produto/Anel margarida.jpeg', 'Anel Margarida', 'Peça exclusiva: Anel Margarida. Material de alta qualidade e acabamento refinado.', 'R$ 99.99')">
+  <h3>Anel Margarida</h3>
+  <p class="preco">R$ 99,99</p>
+  <p id="estoque-anel-margarida" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-margarida" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Margarida', 99.99, 'img-produto/Anel margarida.jpeg', 'anel-margarida')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pulseira trevo azul.jpeg" alt=" pulseira trevo"/>
-    <h3> Pulseira trevo azul</h3>
-    <p class="preco"> R$ 90,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira trevo azul', 85.00, 'img-produto/pulseira trevo azul.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Anel elefante geométrico.jpeg" alt="Anel Elefante Geométrico"
+       onclick="abrirModal('img-produto/Anel elefante geométrico.jpeg', 'Anel Elefante Geométrico', 'Peça exclusiva: Anel Elefante Geométrico. Material de alta qualidade e acabamento refinado.', 'R$ 115.15')">
+  <h3>Anel Elefante Geométrico</h3>
+  <p class="preco">R$ 115,15</p>
+  <p id="estoque-anel-elefante-geométrico" class="estoque" style="display: none;">0</p>
+  <button id="btn-anel-elefante-geométrico" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Elfante Geométrico', 115.15, 'img-produto/Anel elefante geométrico.jpeg', 'anel-elefante-geométrico')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pulseira bismark.jpeg" alt=" pulseira bismark"/>
-    <h3> Pulseira bismark</h3>
-    <p class="preco"> R$ 99,99</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pulseira bismark', 85.00, 'img-produto/pulseira bismark.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/Anel_borboleta.jpeg" alt="Anel Borboleta Cravejado"
+       onclick="abrirModal('img-produto/Anel_borboleta.jpeg', 'Anel Borboleta Cravejado', 'Peça exclusiva: Anel Borboleta Cravejado. Material de alta qualidade e acabamento refinado.', 'R$ 110.00')">
+  <h3>Anel Borboleta Cravejado</h3>
+  <p class="preco">R$ 110,00</p>
+  <p id="estoque-anel-borboleta-cravejado" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-borboleta-cravejado" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Borboleta Cravejado', 110.00, 'img-produto/Anel_borboleta.jpeg', 'anel-borboleta-cravejado')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pigente do sol do amor.jpeg" alt=" pingente do sol"/>
-    <h3> Pigente do sol do mar do amor</h3>
-    <p class="preco"> R$ 65,90</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pigente do sol mar do amor', 65.90, 'img-produto/pigente do sol do amor.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
-  
+  <img src="img-produto/Anel rabo de sereia.jpeg" alt="Anel Rabo de sereia regulável"
+       onclick="abrirModal('img-produto/Anel rabo de sereia.jpeg', 'Anel Rabo de sereia regulável', 'Peça exclusiva: Anel Rabo de sereia regulável. Material de alta qualidade e acabamento refinado.', 'R$ 99.99')">
+  <h3>Anel Rabo de sereia regulável</h3>
+  <p class="preco">R$ 99,99</p>
+  <p id="estoque-anel-rabo-de-sereia-regulável" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-rabo-de-sereia-regulável" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Rabo de sereia regulável', 99.99, 'img-produto/Anel rabo de sereia.jpeg', 'anel-rabo-de-sereia-regulável')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
 <div class="produto-card">
-    <img src="img-produto/pingente feita de sol.jpeg" alt=" pingente feita de sol"/>
-    <h3> Pigente feita de sol</h3>
-    <p class="preco"> R$ 65,90</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 65.90, 'img-produto/pingente feita de sol.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/anel coroa.jpeg" alt="Anel Coroa regulável"
+       onclick="abrirModal('img-produto/anel coroa.jpeg', 'Anel Coroa regulável', 'Peça exclusiva: Anel Coroa regulável. Material de alta qualidade e acabamento refinado.', 'R$ 85.00')">
+  <h3>Anel Coroa regulável</h3>
+  <p class="preco">R$ 85,00</p>
+  <p id="estoque-anel-coroa-regulável" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-coroa-regulável" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Coroa regulável', 85.00, 'img-produto/anel coroa.jpeg', 'anel-coroa-regulável')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/anel lua.jpeg" alt="Anel Lua Vazada"
+       onclick="abrirModal('img-produto/anel lua.jpeg', 'Anel Lua Vazada', 'Peça exclusiva: Anel Lua Vazada. Material de alta qualidade e acabamento refinado.', 'R$ 85.00')">
+  <h3>Anel Lua Vazada</h3>
+  <p class="preco">R$ 85,00</p>
+  <p id="estoque-anel-lua-vazada" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-lua-vazada" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Lua Vazada', 85.00, 'img-produto/anel lua.jpeg', 'anel-lua-vazada')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/anel hamsa.jpeg" alt="Anel Hamsa Grande"
+       onclick="abrirModal('img-produto/anel hamsa.jpeg', 'Anel Hamsa Grande', 'Peça exclusiva: Anel Hamsa Grande. Material de alta qualidade e acabamento refinado.', 'R$ 90.00')">
+  <h3>Anel Hamsa Grande</h3>
+  <p class="preco">R$ 90,00</p>
+  <p id="estoque-anel-hamsa-grande" class="estoque" style="display: none;">3</p>
+  <button id="btn-anel-hamsa-grande" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Anel Hamsa Grande', 90.00, 'img-produto/anel hamsa.jpeg', 'anel-hamsa-grande')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pulseira trevo azul.jpeg" alt="Pulseira trevo azul"
+       onclick="abrirModal('img-produto/pulseira trevo azul.jpeg', 'Pulseira trevo azul', 'Peça exclusiva: Pulseira trevo azul. Material de alta qualidade e acabamento refinado.', 'R$ 90.00')">
+  <h3>Pulseira trevo azul</h3>
+  <p class="preco">R$ 90,00</p>
+  <p id="estoque-pulseira-trevo-azul" class="estoque" style="display: none;">3</p>
+  <button id="btn-pulseira-trevo-azul" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira trevo azul', 90.00, 'img-produto/pulseira trevo azul.jpeg', 'pulseira-trevo-azul')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pulseira bismark.jpeg" alt="Pulseira Bismark"
+       onclick="abrirModal('img-produto/pulseira bismark.jpeg', 'Pulseira Bismark', 'Peça exclusiva: Pulseira Bismark. Material de alta qualidade e acabamento refinado.', 'R$ 99.99')">
+  <h3>Pulseira Bismark</h3>
+  <p class="preco">R$ 99,99</p>
+  <p id="estoque-pulseira-bismark" class="estoque" style="display: none;">3</p>
+  <button id="btn-pulseira-bismark" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pulseira Bismark', 99.99, 'img-produto/pulseira bismark.jpeg', 'pulseira-bismark')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+<div class="produto-card">
+  <img src="img-produto/pigente do sol do amor.jpeg" alt="Pingente do sol do amor"
+       onclick="abrirModal('img-produto/pingente do sol do amor.jpeg', 'Pingente do sol do amor', 'Peça exclusiva: Pingente do sol do amor. Material de alta qualidade e acabamento refinado.', 'R$ 65.90')">
+  <h3>Pingente do sol do amor</h3>
+  <p class="preco">R$ 65,90</p>
+  <p id="estoque-pingente-do-sol-do-amor" class="estoque" style="display: none;">3</p>
+  <button id="btn-pingente-do-sol-do-amor" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente do sol do amor', 65.90, 'img-produto/pigente do sol do amor.jpeg', 'pingente-do-sol-do-amor')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pingente feita de sol.jpeg" alt="Pingente feita de sol"
+       onclick="abrirModal('img-produto/pingente feita de sol.jpeg', 'Pingente feita de sol', 'Peça exclusiva: Pingente feita de sol. Material de alta qualidade e acabamento refinado.', 'R$ 65.90')">
+  <h3>Pingente feita de sol</h3>
+  <p class="preco">R$ 65,90</p>
+  <p id="estoque-pingente-feita-de-sol" class="estoque" style="display: none;">3</p>
+  <button id="btn-pingente-feita-de-sol" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente feita de sol', 65.90, 'img-produto/pingente feita de sol.jpeg', 'pingente-feita-de-sol')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+ <div class="produto-card">
+  <img src="img-produto/pingente de sol de sal.jpeg" alt="Pingente de Sol de sal eu sou"
+       onclick="abrirModal('img-produto/pingente de sol de sal.jpeg', 'Pingente de Sol de sal eu sou', 'Peça exclusiva: Pingente de Sol de sal eu sou. Material de alta qualidade e acabamento refinado.', 'R$ 65.90')">
+  <h3>Pingente de Sol de sal eu sou</h3>
+  <p class="preco">R$ 65,90</p>
+  <p id="estoque-pingente-de-sol-de-sal-eu-sou" class="estoque" style="display: none;">3</p>
+  <button id="btn-pingente-de-sol-de-sal-eu-sou" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente de Sol de sal eu sou', 65.90, 'img-produto/pingente de sol de sal.jpeg', 'pingente-de-sol-de-sal-eu-sou')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pingente rabo de sereia.jpeg" alt="Pingente rabo de sereia"
+       onclick="abrirModal('img-produto/pingente rabo de sereia.jpeg', 'Pingente rabo de sereia', 'Peça exclusiva: Pingente rabo de sereia. Material de alta qualidade e acabamento refinado.', 'R$ 35.00')">
+  <h3>Pingente rabo de sereia</h3>
+  <p class="preco">R$ 35,00</p>
+  <p id="estoque-pingente-rabo-de-sereia" class="estoque" style="display: none;">3</p>
+  <button id="btn-pingente-rabo-de-sereia" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente rabo de sereia', 35.00, 'img-produto/pingente rabo de sereia.jpeg', 'pingente-rabo-de-sereia')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/pingente onda e sol.jpeg" alt="Pingente onda e sol"
+       onclick="abrirModal('img-produto/pingente onda e sol.jpeg', 'Pingente onda e sol', 'Peça exclusiva: Pingente onda e sol. Material de alta qualidade e acabamento refinado.', 'R$ 65.90')">
+  <h3>Pingente onda e sol</h3>
+  <p class="preco">R$ 65,90</p>
+  <p id="estoque-pingente-onda-e-sol" class="estoque" style="display: none;">3</p>
+  <button id="btn-pingente-onda-e-sol" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Pingente onda e sol', 65.90, 'img-produto/pingente onda e sol.jpeg', 'pingente-onda-e-sol')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/V12.jpeg" alt="V12"
+       onclick="abrirModalComImagens(['img-produto/V12.jpeg', 'img-produto/boneca.jpeg'], 'V12', 'Corrente V12 – 50 cm em prata 925' , 'R$ 45,00')">
+  <h3>V12</h3>
+  <p class="preco">R$ 45,00</p>
+  <p id="estoque-v12" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-v12" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('V12', 45.00, 'img-produto/V12.jpeg', 'v12')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 
 <div class="produto-card">
-    <img src="img-produto/pingente de sol de sal.jpeg" alt=" pingente de sol de sal"/>
-    <h3> Pigente de Sol de sal eu sou</h3>
-    <p class="preco"> R$ 65,90</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 65.90, 'img-produto/pingente de sol de sal.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/V15.jpeg" alt="V15"
+       onclick="abrirModalComImagens(['img-produto/V15.jpeg', 'img-produto/boneca.jpeg'], 'V15', 'corrente V15 – 50 cm em  prata 925', 'R$ 60,00')">
+  <h3>V15</h3>
+  <p class="preco">R$ 60,00</p>
+  <p id="estoque-v15" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-v15" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('V15', 60.00, 'img-produto/V15.jpeg', 'v15')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pingente rabo de sereia.jpeg" alt=" pingente rabo de sereia"/>
-    <h3> Pigente rabo de sereia</h3>
-    <p class="preco"> R$ 35,00</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pigente feita de sol', 35.00, 'img-produto/pingente feita de sol.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/corrente pipoca.jpeg" alt="Corrente Pipoca"
+       onclick="abrirModalComImagens(['img-produto/corrente pipoca.jpeg', 'img-produto/boneca.jpeg'], 'Corrente Pipoca', 'Corrente Pipoca – 50 cm em prata 925', 'R$ 75,00')">
+  <h3>Corrente Pipoca</h3>
+  <p class="preco">R$ 75,00</p>
+  <p id="estoque-corrente-pipoca" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-corrente-pipoca" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Corrente Pipoca', 75.00, 'img-produto/corrente pipoca.jpeg', 'corrente-pipoca')">
+    Adicionar ao Carrinho
+  </button>
+</div>
 
 <div class="produto-card">
-    <img src="img-produto/pingente onda e sol.jpeg" alt=" pingente onda e sol"/>
-    <h3> Pigente onda e sol</h3>
-    <p class="preco"> R$ 65,90</p>
-    <button class="btn-add" onclick="adicionarAoCarrinho('pingente onda e sol', 65.90, 'img-produto/pingente onda e sol.jpeg', this)">Adicionar ao Carrinho</button>
-  </div>
+  <img src="img-produto/singapura.jpeg" alt="Singapura"
+       onclick="abrirModalComImagens(['img-produto/singapura.jpeg', 'img-produto/boneca.jpeg'], 'Singapura', 'Corrente Singapura – 45 cm em prata 925', 'R$ 72,00')">
+  <h3>Singapura</h3>
+  <p class="preco">R$ 72,00</p>
+  <p id="estoque-singapura" class="estoque" style="display: none;">Estoque: 3</p>
+  <button id="btn-singapura" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Singapura', 72.00, 'img-produto/singapura.jpeg', 'singapura')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+<div class="produto-card">
+  <img src="img-produto/tornozeleira.jpeg" alt="Tornozeleira delicada"
+       onclick="abrirModal('img-produto/tornozeleira.jpeg', 'Tornozeleira delicada', 'Peça exclusiva: Tornozeleira delicada. Material de alta qualidade, leve e confortável para o dia a dia.', 'R$ 49.90')">
+  <h3>Tornozeleira delicada</h3>
+  <p class="preco">R$ 49,90</p>
+  <p id="estoque-tornozeleira-delicada" class="estoque" style="display: none;">3</p>
+  <button id="btn-tornozeleira-delicada" class="btn-add"
+          onclick="adicionarAoCarrinhoComEstoque('Tornozeleira delicada', 49.90, 'img-produto/tornozeleira.jpeg', 'tornozeleira-delicada')">
+    Adicionar ao Carrinho
+  </button>
+</div>
+
+
+
 </section>
+
+
 
 <!-- RODAPÉ -->
   <footer id="rodape" class="rodape">
@@ -355,6 +571,77 @@
 
 <script src="script.js"></script>
   
+
+
+<div id="modal-produto" class="modal" style="display: none;">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <div class="slider-container">
+      <div id="slider-imagens" class="slider"></div>
+      <div id="slider-indicadores" class="indicadores"></div>
+      <button class="seta seta-esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+      <button class="seta seta-direita" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+    <h2 id="modal-titulo"></h2>
+    <p id="modal-descricao"></p>
+    <p id="modal-preco" class="preco"></p>
+  </div>
+</div>
+
+
+<div id="modal-simples" class="modal" style="display: none;">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModalSimples()">&times;</span>
+    <img id="modal-img-simples" style="width: 100%; border-radius: 12px; margin-bottom: 10px;" />
+    <h2 id="modal-titulo-simples"></h2>
+    <p id="modal-descricao-simples"></p>
+    <p id="modal-preco-simples" class="preco"></p>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="mensagem-carrinho" class="toast-sucesso">
+  ✅ Produto adicionado ao carrinho!
+</div>
+
+
+
+
+<div id="painel-admin" style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#fff;padding:15px;border:1px solid #ccc;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);">
+  <h4>🔧 Repor Estoque</h4>
+  <input type="text" id="idProduto" placeholder="ID do produto" style="margin-bottom:5px;width:100%;padding:6px;">
+  <input type="number" id="novaQuantidade" placeholder="Nova quantidade" style="margin-bottom:5px;width:100%;padding:6px;">
+  <button onclick="reporEstoqueProduto()" style="width:100%;padding:8px;background:#0a0;color:#fff;border:none;border-radius:5px;">Repor Estoque</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="modal-confirmacao" class="modal-confirmacao">
+  <div class="modal-conteudo">
+    <h3>🛍️ Finalizar Pedido</h3>
+    <p>Você está prestes a finalizar seu pedido pelo WhatsApp.</p>
+    <p><strong>Deseja continuar?</strong></p>
+    <p class="alerta">📦 O carrinho será esvaziado após o envio.</p>
+    <div class="botoes">
+      <button onclick="fecharModalConfirmacao()">Cancelar</button>
+      <button class="confirmar" onclick="confirmarFinalizacao()">Confirmar</button>
+    </div>
+  </div>
+</div>
 
 
 </body>
