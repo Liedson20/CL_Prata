@@ -760,3 +760,236 @@ main {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   margin: 0.2rem 0;
 }
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-conteudo {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 35px; /* ✅ Aumenta o tamanho do "X" */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.fechar:hover {
+  color: red;
+}
+
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  flex-shrink: 0;
+  border-radius:px;
+  object-fit: contain;
+}
+
+.seta {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.seta-esquerda {
+  left: 10px;
+}
+.seta-direita {
+  right: 10px;
+}
+
+.indicadores {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.indicadores span {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.indicadores .ativo {
+  background: #0f72db;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-conteudo {
+  text-align: center;
+}
+
+.imagem-modal {
+  max-width: 200px;     /* 👉 tamanho fixo, bem menor */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#modal-preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f72db; /* ✅ Azul forte para destacar o preço */
+  margin-top: 10px;
+}
+
+
+
+#modal-descricao {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+.toast-sucesso {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0d2eb3;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  animation: aparecer 0.3s ease forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.modal-confirmacao {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-conteudo {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-conteudo h3 {
+  margin-top: 0;
+}
+
+.modal-conteudo .alerta {
+  margin: 10px 0;
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.modal-conteudo .botoes {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-conteudo button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-conteudo button:hover {
+  opacity: 0.9;
+}
+
+.modal-conteudo .confirmar {
+  background-color: #0a0;
+  color: white;
+}
+
+.modal-conteudo button:not(.confirmar) {
+  background-color: #ccc;
+}
+
+
+
